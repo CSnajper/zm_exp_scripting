@@ -7,7 +7,7 @@
 #define AUTHOR "Mochi"
 
 #define KICKREASON "Zmien NICK i wbij ponownie!"
-
+//test
 new cvar,zezwolone[32]
 new const reklama[][] = { 
 	
