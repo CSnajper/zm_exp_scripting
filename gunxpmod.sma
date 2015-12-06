@@ -1911,12 +1911,12 @@ public QueryCreateTable( FailState, Handle:hQuery, szError[ ], Errcode, iData[ ]
 		log_to_file("sql.log", "Could not connect to SQL database.");
 		return PLUGIN_CONTINUE;
 	}
-	if(FailState == TQUERY_QUERY_FAILED) {
-		log_to_file("sql.log", "Table Query failed.");
-		return PLUGIN_CONTINUE;
-	}
 	if(Errcode) {
 		log_to_file("sql.log", "Error on Table query: %s", szError);
+		return PLUGIN_CONTINUE;
+	}
+	if(FailState == TQUERY_QUERY_FAILED) {
+		log_to_file("sql.log", "Table Query failed.");
 		return PLUGIN_CONTINUE;
 	}
 	g_boolsqlOK = 1;
