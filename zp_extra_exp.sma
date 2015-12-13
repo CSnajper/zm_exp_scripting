@@ -23,8 +23,6 @@ public plugin_init()
 	
 	cvar_iloscexpa = register_cvar("zp_ilosc_expa_sklep", "100");
 	g_itemid_exp = zp_items_register(g_item_name, g_item_cost);
-	
-	set_task(240.0, "info_snajper");
 }
 
 public zp_fw_items_select_pre(id, itemid) {
@@ -58,11 +56,4 @@ public zp_fw_items_select_post(id, itemid, ignorecost)
 	new name[32]
 	get_user_name(id, name, 31);
 	log_to_file("sql.log", "%s Kupil dodatkowy exp", name);
-}
-
-public info_snajper()
-{
-	client_print(0, print_chat, "Zapraszamy na forum CsFifka.pl");
-	new num = random_num(60,600);
-	set_task(float(num), "info_snajper");
 }

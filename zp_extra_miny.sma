@@ -69,7 +69,6 @@ public plugin_init()
 	register_touch("Mine", "player",  "DotykMiny");
 	register_event("HLTV", "NowaRunda", "a", "1=0", "2=0");
 	register_clcmd("+mina", "PostawMine");
-//	set_task(30.0, "info_snajper");
 }
 
 public plugin_natives()
@@ -222,14 +221,6 @@ public NowaRunda()
 public zp_user_infected_post(id)
 {
 	miny[id] = 0;
-}
-
-public info_snajper()
-{
-	client_print(0, print_chat, "Zapraszamy na forum CsFifka.pl");
-	
-//	new num = random_num(60,600);
-//	set_task(float(num), "info_snajper");
 }
 
 //£atwiejsza zmiana HP gracza
