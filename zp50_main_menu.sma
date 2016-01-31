@@ -137,7 +137,7 @@ show_menu_main(id)
 	new len
 	
 	// Title
-	len += formatex(menu[len], charsmax(menu) - len, "\yZM EXP CsFifka.pl (by Sniper Elite)^n^n")
+	len += formatex(menu[len], charsmax(menu) - len, "\yMenu ZM EXP^n^n")
 	
 	// 1. Buy menu
 	if (moze_wybrac_bron(id) == 1 && is_user_alive(id))
