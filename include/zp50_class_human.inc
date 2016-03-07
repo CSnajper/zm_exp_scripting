@@ -42,17 +42,6 @@ native zp_class_human_get_next(id)
 native zp_class_human_set_next(id, classid)
 
 /**
- * Returns the default maximum health for a specific human class.
- *
- * Note: does not take into account any kind of HP bonuses.
- *
- * @param id		Player index.
- * @param classid	A valid human class ID.
- * @return			Maximum amount of health points, -1 on error.
- */
-native zp_class_human_get_max_health(id, classid)
-
-/**
  * Registers a custom class which will be added to the human classes menu of ZP.
  *
  * Note: The returned human class ID can be later used to identify
@@ -65,7 +54,7 @@ native zp_class_human_get_max_health(id, classid)
  * @param gravity		Class gravity multiplier.
  * @return				An internal human class ID, or ZP_INVALID_HUMAN_CLASS on failure.
  */
-native zp_class_human_register(const name[], const description[], health, Float:speed, Float:gravity)
+native zp_class_human_register(const name[], const description[], health, Float:speed, Float:gravity, armor)
 
 /**
  * Registers a custom player model for a given human class.
@@ -148,11 +137,3 @@ native zp_class_human_menu_text_add(const text[])
  * @param classid		Internal human class ID.
  */
 forward zp_fw_class_human_select_pre(id, classid)
-
-/**
- * Called right after a player selects a class from the menu.
- *
- * @param id			Player index.
- * @param classid		Internal human class ID.
- */
-forward zp_fw_class_human_select_post(id, classid)

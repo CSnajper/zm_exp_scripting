@@ -24,6 +24,9 @@
  */
 native zp_gamemodes_register(const name[])
 
+
+native rozgrzewka(id)
+
 /**
  * Sets a default game mode (to start if no other game mode can been started).
  *

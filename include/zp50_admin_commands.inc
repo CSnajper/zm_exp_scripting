@@ -43,6 +43,15 @@ native zp_admin_commands_human(id, player)
 native zp_admin_commands_nemesis(id, player)
 
 /**
+ * Manually executes admin command: zp_assassin.
+ *
+ * @param id		Admin player index.
+ * @param player	Target player index.
+ * @return			True on success, false otherwise.
+ */
+native zp_admin_commands_assassin(id, player)
+
+/**
  * Manually executes admin command: zp_survivor.
  *
  * @param id		Admin player index.
@@ -50,6 +59,15 @@ native zp_admin_commands_nemesis(id, player)
  * @return			True on success, false otherwise.
  */
 native zp_admin_commands_survivor(id, player)
+
+/**
+ * Manually executes admin command: zp_sniper.
+ *
+ * @param id		Admin player index.
+ * @param player	Target player index.
+ * @return			True on success, false otherwise.
+ */
+native zp_admin_commands_sniper(id, player)
 
 /**
  * Manually executes admin command: zp_respawn.

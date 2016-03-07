@@ -173,11 +173,3 @@ native zp_class_zombie_menu_text_add(const text[])
  * @param classid		Internal zombie class ID.
  */
 forward zp_fw_class_zombie_select_pre(id, classid)
-
-/**
- * Called right after a player selects a class from the menu.
- *
- * @param id			Player index.
- * @param classid		Internal zombie class ID.
- */
-forward zp_fw_class_zombie_select_post(id, classid)
